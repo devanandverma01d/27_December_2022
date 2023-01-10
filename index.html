@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* we can write css code here*/
+    </style>
+    <script src="./js/script.js"></script>
+    <script>
+        /*we can write js code before closing of head tag*/
+    </script>
+</head>
+
+<body>
+    <div id="demo1"></div>
+
+
+    <script>
+        /*we can write js code before clossing of body tag*/
+
+        //1. function definition
+        function add(x, y) {
+            //this is function body
+            alert(x + y);
+        }
+        function mult(x, y) {  // here x,y are formal argument
+            return x * y;
+            //let's see the output inside the function
+            console.log("The multiplication is: " + x);
+        }
+        function div(a = 100, b = 5) {// here a,b are formal argument with default values
+            return a / b;
+            //let's see the output inside the function
+            document.getElementById('demo1').innerHTML = "The division of a and b is: " + y;
+        }
+        //2. function calling/invocation/Execution
+        add(5, 6);  // 5 and 6 are actual argument
+        let x = mult(5, 5); // here 5,5 are actual argument
+        let y = div(25); // here 25 is actual argument
+
+        //let's see the output outside the function
+        console.log("The multiplication is: " + x);
+        //document.getElementById('demo1').innerHTML = "The division of a and b is: " + y;
+
+
+
+
+    </script>
+
+
+
+    <script>
+        //syntax--
+        /*class className(){
+
+        }*/
+        class calculation {
+            addition(x, y) { //1. this is function definition
+                //Every function return something
+                return x + y;
+            }
+            subtraction(x, y) {  //1. this is function definition
+                //Every function return something
+                return x - y;
+            }
+            multiplication(x, y) {  //1. this is function definition
+                //Every function return something
+                return x * y;
+            }
+            division(x, y) {  //1. this is function definition
+                //Every function return something
+                return x / y;
+            }
+        }
+
+        // In order to call methods of a class we need to create class object
+        //sytacx to create object of a class-
+        // let objectName = new className;
+        //objectName.method();
+        let myobj = new calculation;
+
+        let a = myobj.addition(5, 2);
+        console.log("The additon is: " + a);
+        document.write('<p>' + "The additon is: ", a + '</p>');
+
+        let s = myobj.subtraction(15, 5);
+        console.log("The subtraction is: " + s);
+        document.write('<p>' + "The subtraction is: ", s + '</p>');
+
+        let m = myobj.multiplication(20, 5);
+        console.log("The multiplication is: " + m);
+        document.write('<p>' + "The multiplication is: ", m + '</p>');
+
+        let d = myobj.division(100, 20);
+        console.log("The division is: " + d);
+        document.write('<p>' + "The division is: ", d + '</p>');
+
+        // let's create new class named student
+        class student {
+            getStudentName() {
+                console.log("Hello from student Name");
+                document.write('<p>' + 'Hello from student Name' + '</p>');
+            }
+            getStudentSurname() {
+                console.log("Hello from student Surname");
+                document.write('<p>' + 'Hello from student Surname' + '</p>');
+            }
+            getStudentAge() {
+                console.log("Hello from student Age");
+                document.write('<p>' + 'Hello from student Age' + '</p>');
+            }
+
+        }
+        let myobj2 = new student;
+        myobj2.getStudentName();
+        myobj2.getStudentSurname();
+        myobj2.getStudentAge();
+    </script>
+</body>
+
+</html>
